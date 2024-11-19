@@ -46,4 +46,20 @@ function increase_count(&$session) {
     $session['guess_count']++;
 }
 
+function add_user_name_to_ldrbrd($post, &$session) {
+    if (!isset($session['leaderboard'])) {
+        $session['leaderboard'] = [];
+    }
+
+    $session['leaderboard'][] = [
+        'user_name' => $post['user_name'],
+        'guess_count' => $session['guess_count']
+    ];
+
+    usort($session['leaderboard'], "compare_by_guess_count");
+}
+
+function compare_by_guess_count($a, $b) {
+    return $a['guess_count'] <=> $b['guess_count'];
+}
 ?>
