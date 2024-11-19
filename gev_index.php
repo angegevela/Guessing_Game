@@ -1,9 +1,6 @@
 <? 
-require('session.php');
-session_start();
+    require('session.php');
+    session_start();
 
-
-
-
-
-?>
+   
+    ?>
