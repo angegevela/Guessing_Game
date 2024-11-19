@@ -1,0 +1,7 @@
+<?
+define('SECRET_NUMBER_MINIMUM_VALUE', 1);
+define('SECRET_NUMBER_MAXIMUM_VALUE', 500);
+
+
+
+?>
