@@ -29,3 +29,17 @@
         reset_secret_number_and_guess_count($_SESSION);
     }    
     ?>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guessing Game</title>
+    </head>
+    <body>
+    <h1>Guessing Game</h1>
+    <h6>Try it until you guess the number! Good Luck</h6>
+    <p><?= $message_for_user ?></p>
+    </body>
+    </html>
