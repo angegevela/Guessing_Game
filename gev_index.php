@@ -41,5 +41,20 @@
     <h1>Guessing Game</h1>
     <h6>Try it until you guess the number! Good Luck</h6>
     <p><?= $message_for_user ?></p>
+
+    <?php if ($user_correct): ?>
+        <form method="post">
+            <label for="user_name">Your Name For The Leaderboard:</label>
+            <input id="user_name" name="user_name">
+            <input type="submit" value="Submit Name" name="button">
+        </form>
+        <?php else: ?>
+        <form method="post">
+            <label for="user_guess">Your Guess</label>
+            <input id="user_guess" name="user_guess">
+            <input type="submit" value="Guess" name="button">
+            <input type="submit" value="Reset" name="button">
+        </form>
+    <?php endif; ?>
     </body>
     </html>
