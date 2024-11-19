@@ -2,7 +2,7 @@
 require('session.php');
 session_start();
 
-$message_for_user = "I've picked a random number between " . 
+$message_for_user = "I'll be your guide, pick a random number " . 
     SECRET_NUMBER_MINIMUM_VALUE . " and " . 
     SECRET_NUMBER_MAXIMUM_VALUE . ". Can you guess it?";
 

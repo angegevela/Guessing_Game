@@ -1,12 +1,10 @@
-<?
+<?php
 define('SECRET_NUMBER_MINIMUM_VALUE', 1);
 define('SECRET_NUMBER_MAXIMUM_VALUE', 500);
-
 
 function user_guess($post) {
     return isset($post['button']) && $post['button'] == 'Guess';
 }
-
 
 function user_has_requested_a_reset($post) {
     return isset($post['button']) && $post['button'] == 'Reset';
@@ -20,8 +18,7 @@ function secret_number_has_not_yet_been_set($post, $session) {
     return !isset($session['secret_number']) || !$post;
 }
 
-
-function leaderboard_does_not_exist($post, $session) {
+function leaderboard_does_not_exist($session) {
     return !isset($session['leaderboard']) || count($session['leaderboard']) === 0;
 }
 
